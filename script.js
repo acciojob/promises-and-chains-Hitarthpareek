@@ -18,7 +18,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   if (age.value.trim().length === 0 || nameInput.value.trim().length === 0) {
-    alert("Please enter valid details.");
+    alert("Please enter valid details");
     return;
   }
 
