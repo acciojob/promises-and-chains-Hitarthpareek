@@ -7,9 +7,8 @@ const checkAge = () => {
 
 		setTimeout(()=> {
 					let mssg=""
-					if(age.value>18)mssg="Welcome, . You can vote.";
-						else mssg="Oh sorry . You aren't old enough.";
-						 resolve(mssg)
+					if(age.value>18) resolve("Welcome, . You can vote.");
+					else reject("Oh sorry . You aren't old enough.");
 						},4000)
 	})
 }
@@ -23,6 +22,9 @@ form.addEventListener("submit", (e) => {
 	checkAge().then((data)=>{
 		alert(data)
 		form.submit(); // success
+	}).catch((e)=>{
+		alert(e)
+		form.submit();
 	})
 	
    
